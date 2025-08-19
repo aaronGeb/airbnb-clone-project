@@ -144,11 +144,6 @@ This is important because it:
 - **Docker** – for containerization and consistent environments across development and production.  
 
 
-By implementing a CI/CD pipeline, this project ensures **quality, reliability, and faster delivery cycles**.
-
-
-
-
 ## License
 This project is licensed under the [MIT License](LICENSE)
 
