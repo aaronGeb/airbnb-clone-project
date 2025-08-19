@@ -109,3 +109,30 @@ Handles secure payment processing for bookings, including multiple methods (e.g.
 ### **6. Notifications & Alerts**
 Sends confirmations, reminders, and status updates to users via email or in-app messages. This improves user experience by keeping both guests and hosts informed.
 
+## API Security
+Security is a core aspect of this project to ensure user trust, data protection, and safe transactions. The following measures will be implemented:
+
+1.**Authentication**
+
+All API endpoints will be protected using JWT tokens or OAuth 2.0 to verify user identity.
+Why? Ensures only verified users (guests, hosts, admins) can access the system.
+
+2.**Authorization**
+
+Role-Based Access Control (RBAC) will restrict users to only the actions they are permitted to perform (e.g., hosts manage properties, guests make bookings).
+Why? Prevents unauthorized access to sensitive resources like property management or admin functions.
+
+3.**Data Encryption**
+
+All traffic will use HTTPS/TLS to secure data in transit. Sensitive fields (passwords, payment info) will be encrypted at rest.
+Why? Protects user credentials, booking data, and financial transactions from being intercepted or stolen.
+
+4.**Input Validation & Sanitization**
+
+All incoming requests will be validated (type, length, format) to prevent malicious payloads.
+Why? Defends against common vulnerabilities such as SQL Injection and Cross-Site Scripting (XSS).
+
+5.**Logging & Monitoring**
+
+API access logs and error tracking will be enabled to monitor unusual activities and security threats.
+Why? Allows early detection of suspicious behavior and supports auditing in case of breaches.
