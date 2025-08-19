@@ -127,3 +127,28 @@ Why? Allows early detection of suspicious behavior and supports auditing in case
 
 The API will enforce limits on the number of requests per user/IP within a time frame.
 Why? Protects against brute-force attacks, denial-of-service (DoS), and abuse of resources.
+## CI/CD Pipeline
+
+A **CI/CD pipeline** (Continuous Integration / Continuous Deployment) is an automated workflow that helps developers build, test, and deploy applications faster and more reliably.  
+
+- **Continuous Integration (CI):** Ensures that code changes pushed to the repository are automatically tested and integrated into the main branch without breaking the project.  
+- **Continuous Deployment (CD):** Automates the release process so that validated changes are quickly deployed to staging or production environments.  
+
+This is important because it:
+- Reduces manual errors during deployment.  
+- Provides rapid feedback on code quality.  
+- Ensures faster and more consistent delivery of features.  
+
+### Tools we can use
+- **GitHub Actions** – for automated build, test, and deployment workflows.  
+- **Docker** – for containerization and consistent environments across development and production.  
+
+
+By implementing a CI/CD pipeline, this project ensures **quality, reliability, and faster delivery cycles**.
+
+
+
+
+## License
+This project is licensed under the [MIT License](LICENSE)
+
