@@ -92,4 +92,20 @@ The project database is structured to support a booking platform similar to Airb
     - status (pending, completed, failed)
 - Relationships:
 
-    - A payment is tied to exactly one booking.
+  - A payment is tied to exactly one booking.
+
+## Feature Breakdown
+
+### **1. User Management**
+Handles user registration, authentication, and role management (guest, host, admin). This feature ensures secure access, personalized experiences, and role-based permissions across the platform.
+### **2. Property Management**
+Allows hosts to list, update, and manage properties with details such as location, price, and availability. This enables a rich catalog of accommodations for users to browse and book.
+### **3. Booking System**
+Provides guests with the ability to search for properties, check availability, and make reservations. It manages booking statuses (pending, confirmed, cancelled) and ensures smooth scheduling between hosts and guests.
+### **4. Reviews & Ratings**
+Enables guests to leave feedback and ratings on properties they have stayed in. This builds trust and transparency, helping future guests make informed decisions.
+### **5. Payment Integration**
+Handles secure payment processing for bookings, including multiple methods (e.g., credit card, PayPal). It ensures that transactions are reliable, traceable, and tied directly to bookings.
+### **6. Notifications & Alerts**
+Sends confirmations, reminders, and status updates to users via email or in-app messages. This improves user experience by keeping both guests and hosts informed.
+
