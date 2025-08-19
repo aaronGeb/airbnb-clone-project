@@ -123,56 +123,7 @@ Why? Defends against common vulnerabilities such as SQL Injection and Cross-Site
 API access logs and error tracking will be enabled to monitor unusual activities and security threats.
 Why? Allows early detection of suspicious behavior and supports auditing in case of breaches.
 
+6.**Rate Limiting**
 
-## 🗂️ Entity Relationship Diagram (ERD)
-
-```mermaid
-erDiagram
-    USERS {
-        int id PK
-        string name
-        string email
-        string password_hash
-        string role
-    }
-
-    PROPERTIES {
-        int id PK
-        string title
-        string description
-        string location
-        float price_per_night
-        int user_id FK
-    }
-
-    BOOKINGS {
-        int id PK
-        int user_id FK
-        int property_id FK
-        date check_in_date
-        date check_out_date
-        string status
-    }
-
-    REVIEWS {
-        int id PK
-        int user_id FK
-        int property_id FK
-        int rating
-        string comment
-    }
-
-    PAYMENTS {
-        int id PK
-        int booking_id FK
-        float amount
-        string payment_method
-        string status
-    }
-
-    USERS ||--o{ PROPERTIES : "hosts"
-    USERS ||--o{ BOOKINGS : "makes"
-    USERS ||--o{ REVIEWS : "writes"
-    PROPERTIES ||--o{ BOOKINGS : "has"
-    PROPERTIES ||--o{ REVIEWS : "receives"
-    BOOKINGS ||--o| PAYMENTS : "generates"
+The API will enforce limits on the number of requests per user/IP within a time frame.
+Why? Protects against brute-force attacks, denial-of-service (DoS), and abuse of resources.
