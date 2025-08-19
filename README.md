@@ -22,3 +22,74 @@ The Airbnb Clone Project is a full-stack application that simulates a real booki
 - **Docker**: A containerization platform that simplifies deployment and ensures consistency across environments.
 
 - **CI/CD Pipelines**: Automated workflows for testing, building, and deploying code, ensuring reliable and efficient delivery.
+
+## Database Design
+The project database is structured to support a booking platform similar to Airbnb. Below are the key entities, their important fields, and relationships:
+
+1.**Users**
+
+- Fields:
+    - id (Primary Key)
+    - name (Full name)
+    - email (Unique, used for login)
+    - password_hash (Encrypted password)
+    - role (guest, host, or admin)
+
+- Relationships:
+    - A user can list multiple properties.
+    - A user can make multiple bookings.
+    - A user can write multiple reviews.
+  
+2. **Properties**
+
+- Fields:
+
+    - id (Primary Key)
+    - title (Property name/short description)
+    - description (Detailed info)
+    - location (City, Country, Coordinates)
+    - price_per_night
+
+- Relationships:
+    - A property belongs to one user (host).
+    - A property can have many bookings.
+    - A property can receive many reviews.
+  
+3. **Bookings**
+- Fields:
+    - id (Primary Key)
+    - user_id (Guest who made the booking)
+    - property_id (Property being booked)
+    - check_in_date
+    - check_out_date
+    -status (pending, confirmed, cancelled)
+- Relationships:
+    - A booking belongs to one user (guest).
+    - A booking belongs to one property.
+    - A booking may have one payment.
+  
+
+4. **Reviews**
+
+- Fields:
+
+    - id (Primary Key)
+    - user_id (Author of the review)
+    - property_id (Reviewed property)
+    - rating (1–5 scale)
+    - comment
+- Relationships:
+
+    - A review belongs to one user (guest).
+    - A review belongs to one property.
+
+5. **Payments**
+- Fields:
+    - id (Primary Key)
+    - booking_id (Linked booking)
+    - amount
+    - payment_method (credit card, PayPal, etc.)
+    - status (pending, completed, failed)
+- Relationships:
+
+    - A payment is tied to exactly one booking.
