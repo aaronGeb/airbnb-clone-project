@@ -26,7 +26,7 @@ The Airbnb Clone Project is a full-stack application that simulates a real booki
 ## Database Design
 The project database is structured to support a booking platform similar to Airbnb. Below are the key entities, their important fields, and relationships:
 
-## 🗂️ Entity Relationship Diagram (ERD)
+## Entity Relationship Diagram (ERD)
 
 ```mermaid
 erDiagram
